@@ -28,8 +28,8 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "start": "rm -R node_modules && serve -s build",
+    "build": "react-scripts build && rm -R node_modules",
+    "start": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
