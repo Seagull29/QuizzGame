@@ -29,10 +29,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "startBuild": "node index.js"
+    "deploy": "serve -s build"
   },
   "eslintConfig": {
     "extends": [
