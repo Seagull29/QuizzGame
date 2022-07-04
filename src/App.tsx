@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import "./style.css";
 import { Answer, Question } from "./types/Question";
 import { Quiz } from "./components/Quiz";
@@ -128,7 +128,7 @@ export const App = () => {
     }
 
     const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
-        const { value, name, type, checked } = event.target;
+        const { value, name } = event.target;
         setTriviaConfig((prevConfig : QuizGame) => {
             if (name === "amount") {
                 const [min, max] = [1, 50];

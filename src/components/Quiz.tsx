@@ -9,21 +9,16 @@ interface QuestionProps extends Question{
 
 export const Quiz : FC<QuestionProps> = (quiz : QuestionProps) => {
     const { 
-        id,
-        category,
-        type,
-        difficulty,
+        id,        
         question,
-        correctAnswer,
         options,
-        isAnswered
     } = quiz;
 
     const { onSelectedAnswer, onCheckFinishedGame } = quiz;
     
     const getStyle = ({isHeld, isCorrect} : Answer) => {
         
-        if (onCheckFinishedGame() && isCorrect || (onCheckFinishedGame() && isCorrect && isHeld)) {
+        if ((onCheckFinishedGame() && isCorrect) || (onCheckFinishedGame() && isCorrect && isHeld)) {
             return {
                 backgroundColor: "rgba(4, 136, 56, 0.7)", 
                 color: "white",
